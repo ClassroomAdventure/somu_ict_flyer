@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=210mm, initial-scale=1">
+<title>ICTリテラシー向上のためのゲーム型教育プログラム - 教材のご案内</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Shippori+Mincho+B1:wght@400;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+<style>
+  @page { size: A4 portrait; margin: 0; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --gold-light: #f2d888;
+    --gold: #eac43f;
+    --gold-dark: #f28b22;
+    --crimson: #DC143C;
+    --purple: #8A2BE2;
+    --amber: #DAA520;
+    --void: #0a0a0a;
+    --surface: #151515;
+    --text-primary: #f6f6f6;
+    --text-secondary: rgba(255,255,255,0.75);
+    --text-muted: rgba(255,255,255,0.45);
+  }
+
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  body {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    color: var(--text-primary);
+    background: #222;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+  }
+
+  /* ── PAGE: flex column, no absolute, no overlap ── */
+  .page {
+    width: 210mm;
+    height: 297mm;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: var(--void);
+    flex-shrink: 0;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.5);
+  }
+
+  /* Grid bg */
+  .page::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      repeating-linear-gradient(0deg, transparent, transparent 5.9mm, rgba(255,255,255,0.012) 5.9mm, rgba(255,255,255,0.012) 6mm),
+      repeating-linear-gradient(90deg, transparent, transparent 5.9mm, rgba(255,255,255,0.012) 5.9mm, rgba(255,255,255,0.012) 6mm);
+    pointer-events: none; z-index: 0;
+  }
+  .page::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 55mm 55mm at 15mm 110mm, rgba(220,20,60,0.06), transparent),
+      radial-gradient(ellipse 50mm 50mm at 105mm 180mm, rgba(138,43,226,0.05), transparent),
+      radial-gradient(ellipse 55mm 55mm at 195mm 140mm, rgba(218,165,32,0.06), transparent);
+    pointer-events: none; z-index: 0;
+  }
+
+  /* All content sections */
+  .page > * { position: relative; z-index: 1; flex-shrink: 0; }
+
+  /* ======== HEADER ======== */
+  .header {
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold) 50%, var(--gold-light));
+    padding: 0 7mm;
+    height: 13mm;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header-label {
+    font-family: 'Shippori Mincho B1', serif;
+    font-weight: 700;
+    font-size: 4.2mm;
+    color: #1a0a00;
+    letter-spacing: 0.1em;
+    border-left: 0.8mm solid rgba(26,10,0,0.4);
+    padding-left: 2.5mm;
+  }
+  .soumu-logo { height: 9.5mm; object-fit: contain; }
+
+  /* ======== TITLE ======== */
+  .title-area {
+    padding: 5.5mm 14mm 0;
+    text-align: center;
+  }
+  .title-logo {
+    width: 140mm;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  .title-intro {
+    font-size: 2.8mm;
+    line-height: 1.9;
+    color: var(--text-secondary);
+    margin-top: 3mm;
+  }
+  .title-intro strong {
+    color: var(--gold);
+    font-weight: 500;
+  }
+
+  /* ======== SECTION HEADING ======== */
+  .section-heading {
+    text-align: center;
+    padding: 5mm 0 5.5mm;
+  }
+  .section-heading h2 {
+    font-family: 'Shippori Mincho B1', serif;
+    font-weight: 700;
+    font-size: 4.8mm;
+    letter-spacing: 0.2em;
+    display: inline-block;
+    position: relative;
+  }
+  .section-heading h2::before,
+  .section-heading h2::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 16mm;
+    height: 0.15mm;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+  .section-heading h2::before { right: calc(100% + 3mm); }
+  .section-heading h2::after  { left:  calc(100% + 3mm); }
+  .section-subtitle {
+    font-size: 2.5mm;
+    color: var(--text-muted);
+    margin-top: 1mm;
+  }
+
+  /* ======== EPISODES ======== */
+  .episodes {
+    display: flex;
+    gap: 3mm;
+    padding: 0 6mm;
+  }
+  .episode-card {
+    flex: 1;
+    border-radius: 2.5mm;
+    overflow: visible;
+    position: relative;
+    background: var(--surface);
+  }
+  .ep01 { box-shadow: 0 -0.7mm 0 0 var(--crimson), 0 1mm 4mm rgba(0,0,0,0.4); }
+  .ep02 { box-shadow: 0 -0.7mm 0 0 var(--purple), 0 1mm 4mm rgba(0,0,0,0.4); }
+  .ep03 { box-shadow: 0 -0.7mm 0 0 var(--amber), 0 1mm 4mm rgba(0,0,0,0.4); }
+
+  .episode-visual-wrap {
+    position: relative;
+    width: 100%;
+    height: 52mm;
+    border-radius: 2.5mm 2.5mm 0 0;
+    overflow: hidden;
+  }
+  .episode-visual-wrap > img:first-child {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .episode-visual-wrap::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 18mm;
+    background: linear-gradient(to top, var(--surface), transparent);
+    z-index: 1;
+  }
+  .episode-number {
+    position: absolute;
+    top: 2mm; left: 2mm;
+    font-family: 'DM Mono', monospace;
+    font-weight: 500;
+    font-size: 2.3mm;
+    color: rgba(255,255,255,0.95);
+    background: rgba(0,0,0,0.55);
+    padding: 0.5mm 1.8mm;
+    border-radius: 0.8mm;
+    z-index: 4;
+    letter-spacing: 0.1em;
+  }
+  .episode-character {
+    position: absolute;
+    top: 26mm;
+    right: -1mm;
+    height: 26mm;
+    z-index: 6;
+    filter: drop-shadow(-0.5mm 0.5mm 1.5mm rgba(0,0,0,0.7));
+    object-fit: contain;
+    pointer-events: none;
+  }
+  .episode-body {
+    padding: 2.5mm 3.5mm 3mm;
+    position: relative; z-index: 3;
+  }
+  .episode-tag {
+    font-family: 'Shippori Mincho B1', serif;
+    font-weight: 700;
+    font-size: 2.9mm;
+    line-height: 1.4;
+    margin-bottom: 1.2mm;
+  }
+  .ep01 .episode-tag { color: var(--crimson); }
+  .ep02 .episode-tag { color: var(--purple); }
+  .ep03 .episode-tag { color: var(--amber); }
+  .episode-desc {
+    font-size: 2.3mm;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    padding-right: 5mm;
+  }
+
+  /* ======== FEATURES ======== */
+  .features {
+    display: flex;
+    justify-content: center;
+    gap: 3mm;
+    padding: 4.5mm 10mm 0;
+  }
+  .feature {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 2.5mm;
+    padding: 2mm 3mm;
+    background: rgba(255,255,255,0.03);
+    border-radius: 1.2mm;
+  }
+  .feature-dot {
+    display: none;
+  }
+  .feature::before {
+    content: '';
+    width: 1.6mm;
+    height: 1.6mm;
+    border-radius: 9999px;
+    flex-shrink: 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .feature:nth-child(1)::before { background-color: var(--gold); box-shadow: 0 0 1.5mm rgba(234,196,63,0.5); }
+  .feature:nth-child(2)::before { background-color: var(--crimson); box-shadow: 0 0 1.5mm rgba(220,20,60,0.5); }
+  .feature:nth-child(3)::before { background-color: var(--purple); box-shadow: 0 0 1.5mm rgba(138,43,226,0.5); }
+  .feature-label {
+    font-weight: 700;
+    font-size: 2.4mm;
+    color: var(--text-primary);
+  }
+  .feature-sub {
+    font-size: 1.9mm;
+    color: var(--text-muted);
+    margin-left: auto;
+    white-space: nowrap;
+  }
+
+  /* ======== ABOUT ======== */
+  .about-section {
+    padding: 4mm 7mm 0;
+    flex: 1;
+  }
+  .about-box {
+    background: var(--surface);
+    border-radius: 2.5mm;
+    padding: 5mm 5mm;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .about-title {
+    font-family: 'Shippori Mincho B1', serif;
+    font-weight: 700;
+    font-size: 3.3mm;
+    color: var(--text-primary);
+    margin-bottom: 2mm;
+    letter-spacing: 0.06em;
+  }
+  .about-desc {
+    font-size: 2.4mm;
+    line-height: 1.85;
+    color: var(--text-secondary);
+  }
+  .about-desc strong {
+    color: var(--gold);
+    font-weight: 500;
+  }
+  .about-points {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2.5mm;
+    margin-top: auto;
+    padding-top: 3mm;
+  }
+  .about-point {
+    background: rgba(255,255,255,0.025);
+    border-radius: 1.5mm;
+    padding: 2.5mm 3mm;
+    border-left: 0.5mm solid;
+  }
+  .about-point:nth-child(1) { border-color: var(--crimson); }
+  .about-point:nth-child(2) { border-color: var(--purple); }
+  .about-point:nth-child(3) { border-color: var(--amber); }
+  .about-point:nth-child(4) { border-color: var(--gold); }
+  .about-point:nth-child(5) { border-color: var(--crimson); }
+  .about-point:nth-child(6) { border-color: var(--purple); }
+  .about-point-title {
+    font-weight: 700;
+    font-size: 2.4mm;
+    color: var(--text-primary);
+    margin-bottom: 0.6mm;
+  }
+  .about-point-desc {
+    font-size: 2mm;
+    line-height: 1.7;
+    color: var(--text-muted);
+  }
+
+  /* ======== DIVIDER ======== */
+  .divider {
+    margin: 3mm 30mm 0;
+    height: 0.15mm;
+    background: linear-gradient(90deg, transparent, var(--gold) 30%, var(--gold-light) 50%, var(--gold) 70%, transparent);
+    opacity: 0.3;
+  }
+
+  /* ======== ACCESS ======== */
+  .access-area {
+    display: flex;
+    align-items: center;
+    padding: 4mm 8mm;
+    gap: 5mm;
+  }
+  .access-left { flex: 1; }
+  .access-heading {
+    font-family: 'Shippori Mincho B1', serif;
+    font-size: 3.6mm;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: 0.04em;
+    line-height: 1.7;
+  }
+  .access-heading em {
+    font-style: normal;
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .access-how {
+    margin-top: 2mm;
+    font-size: 2.5mm;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+  .access-url {
+    display: inline-block;
+    margin-top: 2mm;
+    font-family: 'DM Mono', monospace;
+    font-size: 2.8mm;
+    font-weight: 500;
+    color: var(--gold);
+    background: rgba(234,196,63,0.08);
+    padding: 1.5mm 3.5mm;
+    border-radius: 1mm;
+  }
+  .qr-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  .qr-area {
+    width: 27mm;
+    height: 27mm;
+    background: #fff;
+    border-radius: 1.5mm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5mm;
+  }
+  .qr-area img, .qr-area canvas {
+    width: 100%;
+    height: 100%;
+  }
+  .qr-label {
+    font-size: 2mm;
+    color: var(--text-muted);
+    margin-top: 1mm;
+  }
+
+  /* ======== FOOTER ======== */
+  .footer {
+    background: var(--surface);
+    padding: 0 7mm;
+    height: 15mm;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+  }
+  .footer-soumu { display: flex; align-items: center; gap: 2mm; }
+  .footer-soumu img { height: 9mm; object-fit: contain; }
+  .footer-soumu-name { font-weight: 700; font-size: 2.6mm; color: var(--text-primary); letter-spacing: 0.1em; }
+  .footer-soumu-dept { font-size: 1.7mm; color: var(--text-muted); margin-top: 0.3mm; }
+  .footer-credits { display: flex; flex-direction: column; gap: 0.5mm; }
+  .footer-credit-row { display: flex; align-items: center; gap: 1.5mm; font-size: 1.9mm; color: var(--text-muted); }
+  .credit-label { font-weight: 700; color: var(--text-secondary); font-size: 1.7mm; min-width: 6mm; }
+  .footer-logos { display: flex; align-items: center; gap: 3mm; }
+  .footer-logos img { height: 7mm; object-fit: contain; }
+
+  /* ======== TOOLBAR ======== */
+  .toolbar {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 9999;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  .toolbar-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+  .toolbar-btn svg { width: 16px; height: 16px; flex-shrink: 0; }
+  .btn-edit {
+    background: #1e1e1e;
+    color: #aaa;
+    border: 1px solid #333;
+  }
+  .btn-edit:hover { background: #2a2a2a; border-color: #555; }
+  .btn-edit.active {
+    background: rgba(234,196,63,0.12);
+    color: var(--gold);
+    border-color: var(--gold);
+  }
+  .btn-pdf {
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+    color: #1a0a00;
+  }
+  .btn-pdf:hover { filter: brightness(1.1); }
+  .btn-pdf:disabled {
+    opacity: 0.6;
+    cursor: wait;
+  }
+  .toolbar-hint {
+    font-size: 11px;
+    color: #666;
+    padding: 6px 10px;
+    background: #1a1a1a;
+    border-radius: 6px;
+    border: 1px solid #2a2a2a;
+  }
+
+  /* Editable states */
+  body.editing [contenteditable="true"] {
+    outline: 1px dashed rgba(234,196,63,0.3);
+    outline-offset: 1px;
+    border-radius: 1px;
+    transition: outline-color 0.2s;
+  }
+  body.editing [contenteditable="true"]:hover {
+    outline-color: rgba(234,196,63,0.5);
+  }
+  body.editing [contenteditable="true"]:focus {
+    outline: 1.5px solid var(--gold);
+    outline-offset: 1px;
+    background: rgba(234,196,63,0.03);
+  }
+
+  @media print {
+    body { width: 210mm; height: 297mm; padding: 0; background: none; display: block; }
+    .page { page-break-after: avoid; box-shadow: none; }
+    .toolbar { display: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar" id="toolbar">
+  <button class="toolbar-btn btn-edit" id="btn-edit">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+    テキスト編集
+  </button>
+  <button class="toolbar-btn btn-pdf" id="btn-pdf">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    PDF保存 / 印刷
+  </button>
+  <span class="toolbar-hint" id="toolbar-hint" style="display:none">クリックでテキストを編集できます</span>
+</div>
+
+<div class="page" id="page">
+
+  <div class="header">
+    <div class="header-label" contenteditable="false">教材のご案内</div>
+    <img src="./lp/icon/soumu_logo.webp" alt="総務省" class="soumu-logo">
+  </div>
+
+  <div class="title-area">
+    <img src="./lp/main/titleLogo_main_white_noBottom.svg" alt="ICTリテラシー向上のためのゲーム型教育プログラム" class="title-logo">
+    <p class="title-intro" contenteditable="false">
+      総務省では、SNS上の様々なリスクについて、<strong>ゲーム形式で体験しながら学べる教材</strong>を公表しています。<br>
+      実際の事例を参考にしたストーリーを体験し、リスクを物語の<strong>「体験」</strong>を通じて学ぶことができます。
+    </p>
+  </div>
+
+  <div class="section-heading">
+    <h2 contenteditable="false">3つの物語</h2>
+    <div class="section-subtitle" contenteditable="false">それぞれ異なるテーマのリスクを、物語を通じて学ぶことができます。</div>
+  </div>
+
+  <div class="episodes">
+    <div class="episode-card ep01">
+      <div class="episode-visual-wrap">
+        <img src="./lp/misinformation/kurado_mainVisual.webp" alt="偽・誤情報">
+        <span class="episode-number">EP.01</span>
+      </div>
+      <div class="episode-body">
+        <div class="episode-tag" contenteditable="false">偽・誤情報編</div>
+        <p class="episode-desc" contenteditable="false">SNS上の災害情報は本当に正しい？情報の信頼性を見極める力を身につけます。</p>
+      </div>
+      <img src="./lp/characters-v4/misinformation/hero_normal.webp" alt="" class="episode-character">
+    </div>
+    <div class="episode-card ep02">
+      <div class="episode-visual-wrap">
+        <img src="./lp/romance/romance_mainVisual.webp" alt="SNS型投資・ロマンス詐欺">
+        <span class="episode-number">EP.02</span>
+      </div>
+      <div class="episode-body">
+        <div class="episode-tag" contenteditable="false">SNS型投資・<br>ロマンス詐欺編</div>
+        <p class="episode-desc" contenteditable="false">祖母がSNSで出会った「素敵な人」。詐欺の手口を知り、対処する力を身につけます。</p>
+      </div>
+      <img src="./lp/characters-v4/romance/grandmother.png" alt="" class="episode-character">
+    </div>
+    <div class="episode-card ep03">
+      <div class="episode-visual-wrap">
+        <img src="./lp/sextortion/jane_mainVisual.webp" alt="セクストーション">
+        <span class="episode-number">EP.03</span>
+      </div>
+      <div class="episode-body">
+        <div class="episode-tag" contenteditable="false">セクストーション編</div>
+        <p class="episode-desc" contenteditable="false">SNSで知り合った海外の女性からの脅迫。性的脅迫の手口や対処法を学びます。</p>
+      </div>
+      <img src="./lp/characters-v4/sextortion/hero_normal.webp" alt="" class="episode-character">
+    </div>
+  </div>
+
+  <div class="features">
+    <div class="feature">
+      <span class="feature-dot"></span>
+      <span class="feature-label" contenteditable="false">ゲーム形式で体験</span>
+      <span class="feature-sub" contenteditable="false">物語に没入して学ぶ</span>
+    </div>
+    <div class="feature">
+      <span class="feature-dot"></span>
+      <span class="feature-label" contenteditable="false">実際の事例を参考</span>
+      <span class="feature-sub" contenteditable="false">リアルなリスクを追体験</span>
+    </div>
+    <div class="feature">
+      <span class="feature-dot"></span>
+      <span class="feature-label" contenteditable="false">誰でも無料で利用可能</span>
+      <span class="feature-sub" contenteditable="false">ブラウザですぐに開始</span>
+    </div>
+  </div>
+
+  <div class="about-section">
+    <div class="about-box">
+      <div class="about-title" contenteditable="false">この教材について</div>
+      <p class="about-desc" contenteditable="false">
+        SNSは私たちの生活に欠かせないものですが、<strong>偽・誤情報</strong>、<strong>投資詐欺やロマンス詐欺</strong>、<strong>性的画像を使った脅迫（セクストーション）</strong>など、様々なリスクが存在しています。本教材は、危険を「知識」としてではなく<strong>「体験」として理解する</strong>ことで、いざという時に自ら判断し行動できる力を身につけることを目的としています。実際に起きている事例を参考にしたストーリーを、ゲーム形式で体験することができます。
+      </p>
+      <div class="about-points">
+        <div class="about-point">
+          <div class="about-point-title" contenteditable="false">体験型学習</div>
+          <div class="about-point-desc" contenteditable="false">物語の中で判断・行動しながらリスクを実感できます</div>
+        </div>
+        <div class="about-point">
+          <div class="about-point-title" contenteditable="false">実際の事例ベース</div>
+          <div class="about-point-desc" contenteditable="false">現実に起きた事件を参考にしたリアルなシナリオです</div>
+        </div>
+        <div class="about-point">
+          <div class="about-point-title" contenteditable="false">判断力の向上</div>
+          <div class="about-point-desc" contenteditable="false">いざという時に自ら判断し行動できる力を育みます</div>
+        </div>
+        <div class="about-point">
+          <div class="about-point-title" contenteditable="false">幅広い世代に対応</div>
+          <div class="about-point-desc" contenteditable="false">ルビ機能を搭載し、子どもから大人まで利用できます</div>
+        </div>
+        <div class="about-point">
+          <div class="about-point-title" contenteditable="false">無料・登録不要</div>
+          <div class="about-point-desc" contenteditable="false">ブラウザだけですぐに始められ、費用は一切かかりません</div>
+        </div>
+        <div class="about-point">
+          <div class="about-point-title" contenteditable="false">授業・研修に活用</div>
+          <div class="about-point-desc" contenteditable="false">学校の授業や企業研修など、教育現場で幅広く活用できます</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="access-area">
+    <div class="access-left">
+      <div class="access-heading" contenteditable="false">
+        下記URLまたはQRコードから<br>
+        <em>無料</em>でご利用いただけます。
+      </div>
+      <div class="access-how" contenteditable="false">
+        スマートフォン・タブレット・PCのブラウザからアクセスしてください。<br>
+        アプリのインストールは不要です。
+      </div>
+      <span class="access-url" contenteditable="false">https://ictliteracy-game.soumu.go.jp</span>
+    </div>
+    <div class="qr-wrapper">
+      <div class="qr-area" id="qr-code"></div>
+      <span class="qr-label">QRコードからアクセス</span>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-soumu">
+      <img src="./lp/icon/soumu_logo.webp" alt="総務省">
+      <div>
+        <div class="footer-soumu-name" contenteditable="false">総務省</div>
+        <div class="footer-soumu-dept" contenteditable="false">情報流通行政局 情報流通振興課 情報活用支援室</div>
+      </div>
+    </div>
+    <div class="footer-credits">
+      <div class="footer-credit-row">
+        <span class="credit-label">制作</span>
+        <span>株式会社Classroom Adventure</span>
+      </div>
+      <div class="footer-credit-row">
+        <span class="credit-label">監修</span>
+        <span>国際大学グローバル・コミュニケーション・センター（GLOCOM）</span>
+      </div>
+    </div>
+    <div class="footer-logos">
+      <img src="./logos/classroom_adventure_logo.webp" alt="Classroom Adventure">
+      <img src="./logos/iuj_logo.webp" alt="GLOCOM">
+    </div>
+  </div>
+
+</div>
+
+<script>
+  // ── QR code ──
+  var qr = qrcode(0, 'M');
+  qr.addData('https://ictliteracy-game.soumu.go.jp');
+  qr.make();
+  document.getElementById('qr-code').innerHTML = qr.createSvgTag({ cellSize: 3, margin: 0 });
+
+  // ── Edit toggle ──
+  var isEditing = false;
+  var pencilIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>';
+
+  document.getElementById('btn-edit').addEventListener('click', function() {
+    isEditing = !isEditing;
+    var btn = this;
+    var hint = document.getElementById('toolbar-hint');
+    var editables = document.querySelectorAll('[contenteditable]');
+
+    if (isEditing) {
+      document.body.classList.add('editing');
+      btn.classList.add('active');
+      btn.innerHTML = pencilIcon + '編集を終了';
+      hint.style.display = '';
+      editables.forEach(function(el) { el.setAttribute('contenteditable', 'true'); });
+    } else {
+      document.body.classList.remove('editing');
+      btn.classList.remove('active');
+      btn.innerHTML = pencilIcon + 'テキスト編集';
+      hint.style.display = 'none';
+      editables.forEach(function(el) { el.setAttribute('contenteditable', 'false'); });
+    }
+  });
+
+  // ── PDF download (via browser print → Save as PDF) ──
+  document.getElementById('btn-pdf').addEventListener('click', function() {
+    if (isEditing) document.getElementById('btn-edit').click();
+    window.print();
+  });
+</script>
+</body>
+</html>
