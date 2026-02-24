@@ -88,7 +88,7 @@
   .header-label {
     font-family: 'Shippori Mincho B1', serif;
     font-weight: 700;
-    font-size: 4.2mm;
+    font-size: 5mm;
     color: #1a0a00;
     letter-spacing: 0.1em;
     border-left: 0.8mm solid rgba(26,10,0,0.4);
@@ -98,7 +98,7 @@
 
   /* ======== TITLE ======== */
   .title-area {
-    padding: 5.5mm 14mm 0;
+    padding: 4mm 14mm 0;
     text-align: center;
   }
   .title-logo {
@@ -108,7 +108,7 @@
     margin: 0 auto;
   }
   .title-intro {
-    font-size: 2.8mm;
+    font-size: 3.5mm;
     line-height: 1.9;
     color: var(--text-secondary);
     margin-top: 3mm;
@@ -121,12 +121,12 @@
   /* ======== SECTION HEADING ======== */
   .section-heading {
     text-align: center;
-    padding: 5mm 0 5.5mm;
+    padding: 3.5mm 0 4mm;
   }
   .section-heading h2 {
     font-family: 'Shippori Mincho B1', serif;
     font-weight: 700;
-    font-size: 4.8mm;
+    font-size: 5.8mm;
     letter-spacing: 0.2em;
     display: inline-block;
     position: relative;
@@ -143,7 +143,7 @@
   .section-heading h2::before { right: calc(100% + 3mm); }
   .section-heading h2::after  { left:  calc(100% + 3mm); }
   .section-subtitle {
-    font-size: 2.5mm;
+    font-size: 3.1mm;
     color: var(--text-muted);
     margin-top: 1mm;
   }
@@ -190,7 +190,7 @@
     top: 2mm; left: 2mm;
     font-family: 'DM Mono', monospace;
     font-weight: 500;
-    font-size: 2.3mm;
+    font-size: 2.6mm;
     color: rgba(255,255,255,0.95);
     background: rgba(0,0,0,0.55);
     padding: 0.5mm 1.8mm;
@@ -215,7 +215,7 @@
   .episode-tag {
     font-family: 'Shippori Mincho B1', serif;
     font-weight: 700;
-    font-size: 2.9mm;
+    font-size: 3.6mm;
     line-height: 1.4;
     margin-bottom: 1.2mm;
   }
@@ -223,64 +223,21 @@
   .ep02 .episode-tag { color: var(--purple); }
   .ep03 .episode-tag { color: var(--amber); }
   .episode-desc {
-    font-size: 2.3mm;
+    font-size: 3mm;
     line-height: 1.8;
     color: var(--text-secondary);
     padding-right: 5mm;
   }
 
-  /* ======== FEATURES ======== */
-  .features {
-    display: flex;
-    justify-content: center;
-    gap: 3mm;
-    padding: 4.5mm 10mm 0;
-  }
-  .feature {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    gap: 2.5mm;
-    padding: 2mm 3mm;
-    background: rgba(255,255,255,0.03);
-    border-radius: 1.2mm;
-  }
-  .feature-dot {
-    display: none;
-  }
-  .feature::before {
-    content: '';
-    width: 1.6mm;
-    height: 1.6mm;
-    border-radius: 9999px;
-    flex-shrink: 0;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-  }
-  .feature:nth-child(1)::before { background-color: var(--gold); box-shadow: 0 0 1.5mm rgba(234,196,63,0.5); }
-  .feature:nth-child(2)::before { background-color: var(--crimson); box-shadow: 0 0 1.5mm rgba(220,20,60,0.5); }
-  .feature:nth-child(3)::before { background-color: var(--purple); box-shadow: 0 0 1.5mm rgba(138,43,226,0.5); }
-  .feature-label {
-    font-weight: 700;
-    font-size: 2.4mm;
-    color: var(--text-primary);
-  }
-  .feature-sub {
-    font-size: 1.9mm;
-    color: var(--text-muted);
-    margin-left: auto;
-    white-space: nowrap;
-  }
-
   /* ======== ABOUT ======== */
   .about-section {
-    padding: 4mm 7mm 0;
+    padding: 3mm 7mm 0;
     flex: 1;
   }
   .about-box {
     background: var(--surface);
     border-radius: 2.5mm;
-    padding: 5mm 5mm;
+    padding: 4mm 5mm;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -288,13 +245,13 @@
   .about-title {
     font-family: 'Shippori Mincho B1', serif;
     font-weight: 700;
-    font-size: 3.3mm;
+    font-size: 4.2mm;
     color: var(--text-primary);
     margin-bottom: 2mm;
     letter-spacing: 0.06em;
   }
   .about-desc {
-    font-size: 2.4mm;
+    font-size: 3.1mm;
     line-height: 1.85;
     color: var(--text-secondary);
   }
@@ -304,38 +261,49 @@
   }
   .about-points {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2.5mm;
+    grid-template-columns: 1fr 1fr;
+    gap: 2mm;
     margin-top: auto;
-    padding-top: 3mm;
+    padding-top: 1.5mm;
   }
   .about-point {
-    background: rgba(255,255,255,0.025);
+    background: rgba(255,255,255,0.03);
     border-radius: 1.5mm;
-    padding: 2.5mm 3mm;
-    border-left: 0.5mm solid;
+    padding: 2.5mm 3.5mm;
+    display: flex;
+    align-items: flex-start;
+    gap: 2.5mm;
   }
-  .about-point:nth-child(1) { border-color: var(--crimson); }
-  .about-point:nth-child(2) { border-color: var(--purple); }
-  .about-point:nth-child(3) { border-color: var(--amber); }
-  .about-point:nth-child(4) { border-color: var(--gold); }
-  .about-point:nth-child(5) { border-color: var(--crimson); }
-  .about-point:nth-child(6) { border-color: var(--purple); }
+  .about-point-icon {
+    width: 5mm;
+    height: 5mm;
+    flex-shrink: 0;
+    margin-top: 0.3mm;
+  }
+  .about-point-icon svg {
+    width: 100%;
+    height: 100%;
+  }
+  .about-point:nth-child(1) .about-point-icon { color: var(--crimson); }
+  .about-point:nth-child(2) .about-point-icon { color: var(--purple); }
+  .about-point:nth-child(3) .about-point-icon { color: var(--gold); }
+  .about-point:nth-child(4) .about-point-icon { color: var(--amber); }
+  .about-point-text { flex: 1; }
   .about-point-title {
     font-weight: 700;
-    font-size: 2.4mm;
+    font-size: 3.1mm;
     color: var(--text-primary);
-    margin-bottom: 0.6mm;
+    margin-bottom: 0.4mm;
   }
   .about-point-desc {
-    font-size: 2mm;
-    line-height: 1.7;
+    font-size: 2.6mm;
+    line-height: 1.6;
     color: var(--text-muted);
   }
 
   /* ======== DIVIDER ======== */
   .divider {
-    margin: 3mm 30mm 0;
+    margin: 2mm 30mm 0;
     height: 0.15mm;
     background: linear-gradient(90deg, transparent, var(--gold) 30%, var(--gold-light) 50%, var(--gold) 70%, transparent);
     opacity: 0.3;
@@ -345,13 +313,13 @@
   .access-area {
     display: flex;
     align-items: center;
-    padding: 4mm 8mm;
+    padding: 3mm 8mm;
     gap: 5mm;
   }
   .access-left { flex: 1; }
   .access-heading {
     font-family: 'Shippori Mincho B1', serif;
-    font-size: 3.6mm;
+    font-size: 4.6mm;
     font-weight: 700;
     color: var(--text-primary);
     letter-spacing: 0.04em;
@@ -366,7 +334,7 @@
   }
   .access-how {
     margin-top: 2mm;
-    font-size: 2.5mm;
+    font-size: 3.2mm;
     color: var(--text-secondary);
     line-height: 1.7;
   }
@@ -374,7 +342,7 @@
     display: inline-block;
     margin-top: 2mm;
     font-family: 'DM Mono', monospace;
-    font-size: 2.8mm;
+    font-size: 3.5mm;
     font-weight: 500;
     color: var(--gold);
     background: rgba(234,196,63,0.08);
@@ -574,54 +542,41 @@
     </div>
   </div>
 
-  <div class="features">
-    <div class="feature">
-      <span class="feature-dot"></span>
-      <span class="feature-label" contenteditable="false">ゲーム形式で体験</span>
-      <span class="feature-sub" contenteditable="false">物語に没入して学ぶ</span>
-    </div>
-    <div class="feature">
-      <span class="feature-dot"></span>
-      <span class="feature-label" contenteditable="false">実際の事例を参考</span>
-      <span class="feature-sub" contenteditable="false">リアルなリスクを追体験</span>
-    </div>
-    <div class="feature">
-      <span class="feature-dot"></span>
-      <span class="feature-label" contenteditable="false">誰でも無料で利用可能</span>
-      <span class="feature-sub" contenteditable="false">ブラウザですぐに開始</span>
-    </div>
-  </div>
 
   <div class="about-section">
     <div class="about-box">
       <div class="about-title" contenteditable="false">この教材について</div>
       <p class="about-desc" contenteditable="false">
-        SNSは私たちの生活に欠かせないものですが、<strong>偽・誤情報</strong>、<strong>投資詐欺やロマンス詐欺</strong>、<strong>性的画像を使った脅迫（セクストーション）</strong>など、様々なリスクが存在しています。本教材は、危険を「知識」としてではなく<strong>「体験」として理解する</strong>ことで、いざという時に自ら判断し行動できる力を身につけることを目的としています。実際に起きている事例を参考にしたストーリーを、ゲーム形式で体験することができます。
+        SNSは私たちの生活に欠かせないものですが、<strong>偽・誤情報</strong>、<strong>投資詐欺やロマンス詐欺</strong>、<strong>性的画像を使った脅迫（セクストーション）</strong>など、様々なリスクが存在しています。本教材は、危険を「知識」としてではなく<strong>「体験」として理解する</strong>ことで、いざという時に自ら判断し行動できる力を身につけることを目的としています。
       </p>
       <div class="about-points">
         <div class="about-point">
-          <div class="about-point-title" contenteditable="false">体験型学習</div>
-          <div class="about-point-desc" contenteditable="false">物語の中で判断・行動しながらリスクを実感できます</div>
+          <div class="about-point-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+          <div class="about-point-text">
+            <div class="about-point-title" contenteditable="false">体験型学習</div>
+            <div class="about-point-desc" contenteditable="false">物語の中で判断・行動しながらリスクを実感</div>
+          </div>
         </div>
         <div class="about-point">
-          <div class="about-point-title" contenteditable="false">実際の事例ベース</div>
-          <div class="about-point-desc" contenteditable="false">現実に起きた事件を参考にしたリアルなシナリオです</div>
+          <div class="about-point-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+          <div class="about-point-text">
+            <div class="about-point-title" contenteditable="false">実際の事例ベース</div>
+            <div class="about-point-desc" contenteditable="false">実際の被害事例を参考にしたシナリオ</div>
+          </div>
         </div>
         <div class="about-point">
-          <div class="about-point-title" contenteditable="false">判断力の向上</div>
-          <div class="about-point-desc" contenteditable="false">いざという時に自ら判断し行動できる力を育みます</div>
+          <div class="about-point-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <div class="about-point-text">
+            <div class="about-point-title" contenteditable="false">幅広い世代に対応</div>
+            <div class="about-point-desc" contenteditable="false">ルビ機能搭載で子どもから大人まで</div>
+          </div>
         </div>
         <div class="about-point">
-          <div class="about-point-title" contenteditable="false">幅広い世代に対応</div>
-          <div class="about-point-desc" contenteditable="false">ルビ機能を搭載し、子どもから大人まで利用できます</div>
-        </div>
-        <div class="about-point">
-          <div class="about-point-title" contenteditable="false">無料・登録不要</div>
-          <div class="about-point-desc" contenteditable="false">ブラウザだけですぐに始められ、費用は一切かかりません</div>
-        </div>
-        <div class="about-point">
-          <div class="about-point-title" contenteditable="false">授業・研修に活用</div>
-          <div class="about-point-desc" contenteditable="false">学校の授業や企業研修など、教育現場で幅広く活用できます</div>
+          <div class="about-point-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+          <div class="about-point-text">
+            <div class="about-point-title" contenteditable="false">授業・研修に活用</div>
+            <div class="about-point-desc" contenteditable="false">学校や企業・自治体の研修に対応</div>
+          </div>
         </div>
       </div>
     </div>
@@ -632,8 +587,7 @@
   <div class="access-area">
     <div class="access-left">
       <div class="access-heading" contenteditable="false">
-        下記URLまたはQRコードから<br>
-        <em>無料</em>でご利用いただけます。
+        誰でも<em>無料</em>で、登録不要でご利用いただけます
       </div>
       <div class="access-how" contenteditable="false">
         スマートフォン・タブレット・PCのブラウザからアクセスしてください。<br>
