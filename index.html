@@ -21,9 +21,9 @@
     --amber: #B8860B;
     --void: #ffffff;
     --surface: #f3f4f6;
-    --text-primary: #1a1a1a;
-    --text-secondary: rgba(0,0,0,0.65);
-    --text-muted: rgba(0,0,0,0.45);
+    --text-primary: #000000;
+    --text-secondary: #000000;
+    --text-muted: #000000;
   }
 
   html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
@@ -88,7 +88,7 @@
   .header-label {
     font-family: 'Zen Kaku Gothic New', sans-serif;
     font-weight: 700;
-    font-size: 5.8mm;
+    font-size: 5.5mm;
     color: #1a0a00;
     letter-spacing: 0.1em;
     border-left: 0.8mm solid rgba(26,10,0,0.4);
@@ -98,7 +98,7 @@
 
   /* ======== TITLE ======== */
   .title-area {
-    padding: 4mm 14mm 0;
+    padding: 3mm 14mm 0;
     text-align: center;
   }
   .title-logo {
@@ -108,10 +108,10 @@
     margin: 0 auto;
   }
   .title-intro {
-    font-size: 4.4mm;
-    line-height: 1.9;
+    font-size: 4.2mm;
+    line-height: 1.8;
     color: var(--text-secondary);
-    margin-top: 3mm;
+    margin-top: 2mm;
   }
   .title-intro strong {
     color: var(--gold);
@@ -121,12 +121,12 @@
   /* ======== SECTION HEADING ======== */
   .section-heading {
     text-align: center;
-    padding: 3.5mm 0 4mm;
+    padding: 2.5mm 0 3mm;
   }
   .section-heading h2 {
     font-family: 'Zen Kaku Gothic New', sans-serif;
     font-weight: 700;
-    font-size: 7.2mm;
+    font-size: 7mm;
     letter-spacing: 0.2em;
     display: inline-block;
     position: relative;
@@ -143,7 +143,7 @@
   .section-heading h2::before { right: calc(100% + 3mm); }
   .section-heading h2::after  { left:  calc(100% + 3mm); }
   .section-subtitle {
-    font-size: 4mm;
+    font-size: 3.9mm;
     color: var(--text-muted);
     margin-top: 1mm;
   }
@@ -190,7 +190,7 @@
     top: 2mm; left: 2mm;
     font-family: 'DM Mono', monospace;
     font-weight: 500;
-    font-size: 3mm;
+    font-size: 2.9mm;
     color: rgba(255,255,255,0.95);
     background: rgba(0,0,0,0.55);
     padding: 0.5mm 1.8mm;
@@ -209,13 +209,13 @@
     pointer-events: none;
   }
   .episode-body {
-    padding: 2.5mm 3.5mm 3mm;
+    padding: 2mm 3.5mm 2.5mm;
     position: relative; z-index: 3;
   }
   .episode-tag {
     font-family: 'Zen Kaku Gothic New', sans-serif;
     font-weight: 700;
-    font-size: 4.5mm;
+    font-size: 4.4mm;
     line-height: 1.4;
     margin-bottom: 1.2mm;
   }
@@ -223,7 +223,7 @@
   .ep02 .episode-tag { color: var(--purple); }
   .ep03 .episode-tag { color: var(--amber); }
   .episode-desc {
-    font-size: 3.8mm;
+    font-size: 3.7mm;
     line-height: 1.8;
     color: var(--text-secondary);
     padding-right: 5mm;
@@ -231,13 +231,13 @@
 
   /* ======== ABOUT ======== */
   .about-section {
-    padding: 3mm 7mm 0;
+    padding: 2.5mm 7mm 0;
     flex: 1;
   }
   .about-box {
     background: var(--surface);
     border-radius: 2.5mm;
-    padding: 4mm 5mm;
+    padding: 3mm 5mm;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -251,7 +251,7 @@
     letter-spacing: 0.06em;
   }
   .about-desc {
-    font-size: 4mm;
+    font-size: 3.9mm;
     line-height: 1.85;
     color: var(--text-secondary);
   }
@@ -291,19 +291,19 @@
   .about-point-text { flex: 1; }
   .about-point-title {
     font-weight: 700;
-    font-size: 4mm;
+    font-size: 3.9mm;
     color: var(--text-primary);
     margin-bottom: 0.4mm;
   }
   .about-point-desc {
-    font-size: 3.4mm;
+    font-size: 3.3mm;
     line-height: 1.6;
     color: var(--text-muted);
   }
 
   /* ======== DIVIDER ======== */
   .divider {
-    margin: 2mm 30mm 0;
+    margin: 1.5mm 30mm 0;
     height: 0.15mm;
     background: linear-gradient(90deg, transparent, rgba(0,0,0,0.15) 30%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.15) 70%, transparent);
     opacity: 1;
@@ -313,13 +313,13 @@
   .access-area {
     display: flex;
     align-items: center;
-    padding: 3mm 8mm;
+    padding: 2.5mm 8mm;
     gap: 5mm;
   }
   .access-left { flex: 1; }
   .access-heading {
     font-family: 'Zen Kaku Gothic New', sans-serif;
-    font-size: 5.8mm;
+    font-size: 5.5mm;
     font-weight: 700;
     color: var(--text-primary);
     letter-spacing: 0.04em;
@@ -334,7 +334,7 @@
   }
   .access-how {
     margin-top: 2mm;
-    font-size: 4mm;
+    font-size: 3.9mm;
     color: var(--text-secondary);
     line-height: 1.7;
   }
@@ -342,7 +342,7 @@
     display: inline-block;
     margin-top: 2mm;
     font-family: 'DM Mono', monospace;
-    font-size: 4.4mm;
+    font-size: 4.2mm;
     font-weight: 500;
     color: var(--gold-dark);
     background: rgba(208,117,24,0.1);
@@ -371,7 +371,7 @@
     height: 100%;
   }
   .qr-label {
-    font-size: 2.4mm;
+    font-size: 2.3mm;
     color: var(--text-muted);
     margin-top: 1mm;
   }
@@ -388,10 +388,10 @@
   }
   .footer-soumu { display: flex; align-items: center; gap: 2mm; }
   .footer-soumu img { height: 9mm; object-fit: contain; }
-  .footer-soumu-name { font-weight: 700; font-size: 3mm; color: var(--text-primary); letter-spacing: 0.1em; }
+  .footer-soumu-name { font-weight: 700; font-size: 2.9mm; color: var(--text-primary); letter-spacing: 0.1em; }
   .footer-soumu-dept { font-size: 2mm; color: var(--text-muted); margin-top: 0.3mm; }
   .footer-credits { display: flex; flex-direction: column; gap: 0.5mm; }
-  .footer-credit-row { display: flex; align-items: center; gap: 1.5mm; font-size: 2.3mm; color: var(--text-muted); }
+  .footer-credit-row { display: flex; align-items: center; gap: 1.5mm; font-size: 2.2mm; color: var(--text-muted); }
   .credit-label { font-weight: 700; color: var(--text-secondary); font-size: 2mm; min-width: 6mm; }
   .footer-logos { display: flex; align-items: center; gap: 3mm; }
   .footer-logos img { height: 7mm; object-fit: contain; }
