@@ -14,16 +14,16 @@
 
   :root {
     --gold-light: #f2d888;
-    --gold: #eac43f;
-    --gold-dark: #f28b22;
+    --gold: #c9a020;
+    --gold-dark: #d07518;
     --crimson: #DC143C;
-    --purple: #8A2BE2;
-    --amber: #DAA520;
-    --void: #0a0a0a;
-    --surface: #151515;
-    --text-primary: #f6f6f6;
-    --text-secondary: rgba(255,255,255,0.75);
-    --text-muted: rgba(255,255,255,0.45);
+    --purple: #7B22CC;
+    --amber: #B8860B;
+    --void: #ffffff;
+    --surface: #f3f4f6;
+    --text-primary: #1a1a1a;
+    --text-secondary: rgba(0,0,0,0.65);
+    --text-muted: rgba(0,0,0,0.45);
   }
 
   html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
@@ -31,7 +31,7 @@
   body {
     font-family: 'Zen Kaku Gothic New', sans-serif;
     color: var(--text-primary);
-    background: #222;
+    background: #e0e0e0;
     margin: 0;
     min-height: 100vh;
     display: flex;
@@ -49,7 +49,7 @@
     flex-direction: column;
     background: var(--void);
     flex-shrink: 0;
-    box-shadow: 0 4px 30px rgba(0,0,0,0.5);
+    box-shadow: 0 4px 30px rgba(0,0,0,0.15);
   }
 
   /* Grid bg */
@@ -58,8 +58,8 @@
     position: absolute;
     inset: 0;
     background:
-      repeating-linear-gradient(0deg, transparent, transparent 5.9mm, rgba(255,255,255,0.012) 5.9mm, rgba(255,255,255,0.012) 6mm),
-      repeating-linear-gradient(90deg, transparent, transparent 5.9mm, rgba(255,255,255,0.012) 5.9mm, rgba(255,255,255,0.012) 6mm);
+      repeating-linear-gradient(0deg, transparent, transparent 5.9mm, rgba(0,0,0,0.03) 5.9mm, rgba(0,0,0,0.03) 6mm),
+      repeating-linear-gradient(90deg, transparent, transparent 5.9mm, rgba(0,0,0,0.03) 5.9mm, rgba(0,0,0,0.03) 6mm);
     pointer-events: none; z-index: 0;
   }
   .page::after {
@@ -67,9 +67,9 @@
     position: absolute;
     inset: 0;
     background:
-      radial-gradient(ellipse 55mm 55mm at 15mm 110mm, rgba(220,20,60,0.06), transparent),
-      radial-gradient(ellipse 50mm 50mm at 105mm 180mm, rgba(138,43,226,0.05), transparent),
-      radial-gradient(ellipse 55mm 55mm at 195mm 140mm, rgba(218,165,32,0.06), transparent);
+      radial-gradient(ellipse 55mm 55mm at 15mm 110mm, rgba(220,20,60,0.04), transparent),
+      radial-gradient(ellipse 50mm 50mm at 105mm 180mm, rgba(138,43,226,0.03), transparent),
+      radial-gradient(ellipse 55mm 55mm at 195mm 140mm, rgba(218,165,32,0.04), transparent);
     pointer-events: none; z-index: 0;
   }
 
@@ -86,9 +86,9 @@
     justify-content: space-between;
   }
   .header-label {
-    font-family: 'Shippori Mincho B1', serif;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
     font-weight: 700;
-    font-size: 5mm;
+    font-size: 5.8mm;
     color: #1a0a00;
     letter-spacing: 0.1em;
     border-left: 0.8mm solid rgba(26,10,0,0.4);
@@ -108,7 +108,7 @@
     margin: 0 auto;
   }
   .title-intro {
-    font-size: 3.8mm;
+    font-size: 4.4mm;
     line-height: 1.9;
     color: var(--text-secondary);
     margin-top: 3mm;
@@ -124,9 +124,9 @@
     padding: 3.5mm 0 4mm;
   }
   .section-heading h2 {
-    font-family: 'Shippori Mincho B1', serif;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
     font-weight: 700;
-    font-size: 6.2mm;
+    font-size: 7.2mm;
     letter-spacing: 0.2em;
     display: inline-block;
     position: relative;
@@ -138,12 +138,12 @@
     top: 50%;
     width: 16mm;
     height: 0.15mm;
-    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    background: linear-gradient(90deg, transparent, rgba(0,0,0,0.2), transparent);
   }
   .section-heading h2::before { right: calc(100% + 3mm); }
   .section-heading h2::after  { left:  calc(100% + 3mm); }
   .section-subtitle {
-    font-size: 3.4mm;
+    font-size: 4mm;
     color: var(--text-muted);
     margin-top: 1mm;
   }
@@ -161,9 +161,9 @@
     position: relative;
     background: var(--surface);
   }
-  .ep01 { box-shadow: 0 -0.7mm 0 0 var(--crimson), 0 1mm 4mm rgba(0,0,0,0.4); }
-  .ep02 { box-shadow: 0 -0.7mm 0 0 var(--purple), 0 1mm 4mm rgba(0,0,0,0.4); }
-  .ep03 { box-shadow: 0 -0.7mm 0 0 var(--amber), 0 1mm 4mm rgba(0,0,0,0.4); }
+  .ep01 { box-shadow: 0 -0.7mm 0 0 var(--crimson), 0 1mm 4mm rgba(0,0,0,0.1); }
+  .ep02 { box-shadow: 0 -0.7mm 0 0 var(--purple), 0 1mm 4mm rgba(0,0,0,0.1); }
+  .ep03 { box-shadow: 0 -0.7mm 0 0 var(--amber), 0 1mm 4mm rgba(0,0,0,0.1); }
 
   .episode-visual-wrap {
     position: relative;
@@ -190,7 +190,7 @@
     top: 2mm; left: 2mm;
     font-family: 'DM Mono', monospace;
     font-weight: 500;
-    font-size: 2.6mm;
+    font-size: 3mm;
     color: rgba(255,255,255,0.95);
     background: rgba(0,0,0,0.55);
     padding: 0.5mm 1.8mm;
@@ -204,7 +204,7 @@
     right: -1mm;
     height: 26mm;
     z-index: 6;
-    filter: drop-shadow(-0.5mm 0.5mm 1.5mm rgba(0,0,0,0.7));
+    filter: drop-shadow(-0.5mm 0.5mm 1.5mm rgba(0,0,0,0.3));
     object-fit: contain;
     pointer-events: none;
   }
@@ -213,9 +213,9 @@
     position: relative; z-index: 3;
   }
   .episode-tag {
-    font-family: 'Shippori Mincho B1', serif;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
     font-weight: 700;
-    font-size: 3.9mm;
+    font-size: 4.5mm;
     line-height: 1.4;
     margin-bottom: 1.2mm;
   }
@@ -223,7 +223,7 @@
   .ep02 .episode-tag { color: var(--purple); }
   .ep03 .episode-tag { color: var(--amber); }
   .episode-desc {
-    font-size: 3.3mm;
+    font-size: 3.8mm;
     line-height: 1.8;
     color: var(--text-secondary);
     padding-right: 5mm;
@@ -243,15 +243,15 @@
     flex-direction: column;
   }
   .about-title {
-    font-family: 'Shippori Mincho B1', serif;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
     font-weight: 700;
-    font-size: 4.5mm;
+    font-size: 5.2mm;
     color: var(--text-primary);
     margin-bottom: 2mm;
     letter-spacing: 0.06em;
   }
   .about-desc {
-    font-size: 3.4mm;
+    font-size: 4mm;
     line-height: 1.85;
     color: var(--text-secondary);
   }
@@ -267,7 +267,7 @@
     padding-top: 1.5mm;
   }
   .about-point {
-    background: rgba(255,255,255,0.03);
+    background: rgba(0,0,0,0.04);
     border-radius: 1.5mm;
     padding: 2.5mm 3.5mm;
     display: flex;
@@ -291,12 +291,12 @@
   .about-point-text { flex: 1; }
   .about-point-title {
     font-weight: 700;
-    font-size: 3.4mm;
+    font-size: 4mm;
     color: var(--text-primary);
     margin-bottom: 0.4mm;
   }
   .about-point-desc {
-    font-size: 2.9mm;
+    font-size: 3.4mm;
     line-height: 1.6;
     color: var(--text-muted);
   }
@@ -305,8 +305,8 @@
   .divider {
     margin: 2mm 30mm 0;
     height: 0.15mm;
-    background: linear-gradient(90deg, transparent, var(--gold) 30%, var(--gold-light) 50%, var(--gold) 70%, transparent);
-    opacity: 0.3;
+    background: linear-gradient(90deg, transparent, rgba(0,0,0,0.15) 30%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.15) 70%, transparent);
+    opacity: 1;
   }
 
   /* ======== ACCESS ======== */
@@ -318,8 +318,8 @@
   }
   .access-left { flex: 1; }
   .access-heading {
-    font-family: 'Shippori Mincho B1', serif;
-    font-size: 5mm;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 5.8mm;
     font-weight: 700;
     color: var(--text-primary);
     letter-spacing: 0.04em;
@@ -334,7 +334,7 @@
   }
   .access-how {
     margin-top: 2mm;
-    font-size: 3.5mm;
+    font-size: 4mm;
     color: var(--text-secondary);
     line-height: 1.7;
   }
@@ -342,10 +342,10 @@
     display: inline-block;
     margin-top: 2mm;
     font-family: 'DM Mono', monospace;
-    font-size: 3.8mm;
+    font-size: 4.4mm;
     font-weight: 500;
-    color: var(--gold);
-    background: rgba(234,196,63,0.08);
+    color: var(--gold-dark);
+    background: rgba(208,117,24,0.1);
     padding: 1.5mm 3.5mm;
     border-radius: 1mm;
   }
@@ -359,6 +359,7 @@
     width: 27mm;
     height: 27mm;
     background: #fff;
+    border: 0.3mm solid rgba(0,0,0,0.1);
     border-radius: 1.5mm;
     display: flex;
     align-items: center;
@@ -370,7 +371,7 @@
     height: 100%;
   }
   .qr-label {
-    font-size: 2mm;
+    font-size: 2.4mm;
     color: var(--text-muted);
     margin-top: 1mm;
   }
@@ -387,11 +388,11 @@
   }
   .footer-soumu { display: flex; align-items: center; gap: 2mm; }
   .footer-soumu img { height: 9mm; object-fit: contain; }
-  .footer-soumu-name { font-weight: 700; font-size: 2.6mm; color: var(--text-primary); letter-spacing: 0.1em; }
-  .footer-soumu-dept { font-size: 1.7mm; color: var(--text-muted); margin-top: 0.3mm; }
+  .footer-soumu-name { font-weight: 700; font-size: 3mm; color: var(--text-primary); letter-spacing: 0.1em; }
+  .footer-soumu-dept { font-size: 2mm; color: var(--text-muted); margin-top: 0.3mm; }
   .footer-credits { display: flex; flex-direction: column; gap: 0.5mm; }
-  .footer-credit-row { display: flex; align-items: center; gap: 1.5mm; font-size: 1.9mm; color: var(--text-muted); }
-  .credit-label { font-weight: 700; color: var(--text-secondary); font-size: 1.7mm; min-width: 6mm; }
+  .footer-credit-row { display: flex; align-items: center; gap: 1.5mm; font-size: 2.3mm; color: var(--text-muted); }
+  .credit-label { font-weight: 700; color: var(--text-secondary); font-size: 2mm; min-width: 6mm; }
   .footer-logos { display: flex; align-items: center; gap: 3mm; }
   .footer-logos img { height: 7mm; object-fit: contain; }
 
@@ -471,18 +472,18 @@
 
   /* Editable states */
   body.editing [contenteditable="true"] {
-    outline: 1px dashed rgba(234,196,63,0.3);
+    outline: 1px dashed rgba(208,117,24,0.3);
     outline-offset: 1px;
     border-radius: 1px;
     transition: outline-color 0.2s;
   }
   body.editing [contenteditable="true"]:hover {
-    outline-color: rgba(234,196,63,0.5);
+    outline-color: rgba(208,117,24,0.5);
   }
   body.editing [contenteditable="true"]:focus {
-    outline: 1.5px solid var(--gold);
+    outline: 1.5px solid var(--gold-dark);
     outline-offset: 1px;
-    background: rgba(234,196,63,0.03);
+    background: rgba(208,117,24,0.05);
   }
 
   @media print {
@@ -525,7 +526,7 @@
   </div>
 
   <div class="title-area">
-    <img src="./lp/main/titleLogo_main_white_noBottom.svg" alt="ICTリテラシー向上のためのゲーム型教育プログラム" class="title-logo">
+    <img src="./lp/main/titleLogo_main_dark_noBottom.svg" alt="ICTリテラシー向上のためのゲーム型教育プログラム" class="title-logo">
     <p class="title-intro" contenteditable="false">
       総務省では、SNS上の様々なリスクについて<br><strong>ゲーム形式で体験しながら学べる教材</strong>を公開しています。
     </p>
