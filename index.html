@@ -502,9 +502,11 @@
     .page { page-break-after: avoid; box-shadow: none; }
     .episode-card { box-shadow: none !important; border: 0.3mm solid rgba(0,0,0,0.12); }
     .access-heading em {
-      background: none;
-      -webkit-text-fill-color: initial;
-      color: var(--gold-dark);
+      background: none !important;
+      -webkit-background-clip: initial !important;
+      background-clip: initial !important;
+      -webkit-text-fill-color: var(--gold-dark) !important;
+      color: var(--gold-dark) !important;
     }
     .toolbar { display: none !important; }
   }
